@@ -81,13 +81,11 @@ public class MemoryService {
                 .map(m -> m.replaceAll("[\\p{Cntrl}&&[^\\r\\n\\t]]", ""))
                 .orElse("");
 
-        var formattedMemory = "Fact from %s, %s".formatted(Instant.now(), sanitizedMemory);
-
         var memoryData = Map.of(
                 "memories", List.of(Map.of(
                         "id", "knowledge.entry.%s".formatted(UUID.randomUUID()),
                         "namespace", KNOWLEDGE_NAMESPACE,
-                        "text", formattedMemory,
+                        "text", sanitizedMemory,
                         "memory_type", MEMORY_TYPE_SEMANTIC
                 ))
         );
