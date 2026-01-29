@@ -42,14 +42,6 @@ public class FilesProcessor {
         }
     }
 
-    /*****************************************************************
-     [Lesson 4] Knowledge base with embeddings, parsers, and splitters
-
-     In this section, we implement the logic to process PDF files by
-     parsing their content and splitting it into manageable segments
-     before storing them as embeddings to build up the knowledge base.
-     ******************************************************************/
-
     private void processFile(File file) {
         final DocumentParser documentParser = new ApachePdfBoxDocumentParser(true);
         final DocumentSplitter documentSplitter = new DocumentByParagraphSplitter(1000, 100);
