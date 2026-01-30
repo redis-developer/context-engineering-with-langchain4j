@@ -4,6 +4,7 @@ import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.TokenWindowChatMemory;
 import dev.langchain4j.model.openai.OpenAiTokenCountEstimator;
 import dev.langchain4j.store.memory.chat.ChatMemoryStore;
+import io.redis.devrel.workshop.extensions.WorkingMemoryChat;
 import io.redis.devrel.workshop.extensions.WorkingMemoryStore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,10 +36,10 @@ public class ShortTermMemory {
 
     @Bean
     public ChatMemory chatMemory(ChatMemoryStore chatMemoryStore) {
-        return TokenWindowChatMemory.builder()
+        // TODO: Use the TokenWindowChatMemory with an TokenCountEstimator to limit memory size based on token count
+        return WorkingMemoryChat.builder()
                 .id(userId)
                 .chatMemoryStore(chatMemoryStore)
-                .maxTokens(maxTokens, new OpenAiTokenCountEstimator(modelName))
                 .build();
     }
 
