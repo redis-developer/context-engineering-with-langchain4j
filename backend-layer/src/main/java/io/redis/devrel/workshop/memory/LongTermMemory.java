@@ -24,22 +24,14 @@ public class LongTermMemory {
 
     @Bean
     public RetrievalAugmentor getRetrievalAugmentor() {
-        ContentInjector contentInjector = DefaultContentInjector.builder()
-                .promptTemplate(PromptTemplate.from("{{userMessage}}\n\n[Context]\n{{contents}}"))
-                .build();
-
-        QueryRouter queryRouter = new DefaultQueryRouter(List.of(getGeneralKnowledgeBase()));
-
+        // TODO: Implement a content injector and a query router to build the
+        // RetrievalAugmentor correctly.
         return DefaultRetrievalAugmentor.builder()
-                .contentInjector(contentInjector)
-                .queryRouter(queryRouter)
                 .build();
     }
 
     private ContentRetriever getGeneralKnowledgeBase() {
-        return query -> memoryService.searchKnowledgeBase(query.text())
-                .stream()
-                .map(Content::from)
-                .toList();
+        // TODO: Implement a ContentRetriever to retrieve the knowledge base
+        return null;
     }
 }
