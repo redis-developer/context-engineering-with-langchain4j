@@ -39,7 +39,7 @@ By the end of this workshop, you'll have built a complete AI application featuri
 | [Redis Cloud](https://redis.io/try-free)                 | Semantic caching service powered by Redis LangCache      |
 
 ## 🗺️ Workshop Structure
-This workshop has an estimated duration of 2 hours and is organized into 9 progressive labs, each building on the previous one.
+This workshop has an estimated duration of 2 hours and is organized into 9 progressive labs, each building on the previous one. Each completed lab will tease out a specific need for context engineering techniques, which will be addressed in the subsequent lab.
 
 | Lab | Topic                                                           | Duration | Branch                            |
 |:----|:----------------------------------------------------------------|:---------|:----------------------------------
