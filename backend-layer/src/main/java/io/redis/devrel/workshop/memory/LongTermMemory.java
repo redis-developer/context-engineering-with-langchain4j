@@ -27,7 +27,7 @@ public class LongTermMemory {
     private MemoryService memoryService;
 
     @Bean
-    public RetrievalAugmentor getRetrievalAugmentor(ChatModel chatModel) {
+    public RetrievalAugmentor getRetrievalAugmentor() {
         ContentInjector contentInjector = DefaultContentInjector.builder()
                 .promptTemplate(PromptTemplate.from("{{userMessage}}\n\n[Context]\n{{contents}}"))
                 .build();
