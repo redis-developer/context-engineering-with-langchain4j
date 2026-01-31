@@ -11,19 +11,19 @@ By the end of this workshop, you'll have built a complete AI application featuri
 * RAG (Retrieval-Augmented Generation) with knowledge bases
 * Dual-layer memory architecture (short-term and long-term memory)
 * Query compression techniques for efficient context retrieval
-* Content Reranking to optimize relevance of retrieved information
+* Content Reranking to optimize the relevance of retrieved information
 * Few-shot learning pattern for improved generated responses
 * Dynamic context window management based on token limits
-* Semantic caching to optmize performance and reduce LLM costs
+* Semantic caching to optimize performance and reduce LLM costs
 
 ## 📋 Prerequisites
 
 ### Required knowledge
 * Basic understanding of Java programming
-* Familiarity with RESTful APIs
 * Basic knowledge of LLMs and AI concepts
 * Familiarity with command-line interfaces
 * Basic understanding of Docker and Git
+* Familiarity with RESTful APIs
 
 ### Required software
 * [Java 21+](https://www.oracle.com/java/technologies/downloads)
@@ -53,7 +53,7 @@ This workshop is organized into 9 progressive labs, each building on the previou
 | 8   | Enabling token management to handle token limits                | 10 mins  | `lab-8-starter` |
 | 9   | Implementing semantic caching for conversations                 | 25 mins  | `lab-9-starter` |
 
-Each lab also contains a corresponding `lab-X-solution` branch with the completed code for reference. You can use this branch to compare your implementation or to get unstuck if needed.
+Each lab also contains a corresponding `lab-X-solution` branch with the completed code for reference. You can use this branch to compare your current implementation using `git diff {lab-X-solution}`. Alternatively, you can switch to the solution branch at any time during the lab if you are falling behind or to get unstuck.
 
 ## 🚀 Getting Started
 
