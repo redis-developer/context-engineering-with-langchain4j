@@ -132,15 +132,8 @@ curl -X GET "http://localhost:8080/ai/chat/string?query=Hello"
 - Provides CORS configuration for web frontend
 
 ### 4. `application.properties`
-```properties
-langchain4j.open-ai.streaming-chat-model.api-key=${OPENAI_API_KEY}
-langchain4j.open-ai.streaming-chat-model.model-name=gpt-3.5-turbo
-langchain4j.open-ai.streaming-chat-model.max-tokens=4096
-langchain4j.open-ai.streaming-chat-model.temperature=0.7
-```
-- Set the OpenAI API key and model parameters
 - Leverages the Spring Boot starter for LangChain4J
-
+- Set the OpenAI API key and model parameters
 
 ## 🔍 What's Missing? (Context Engineering Perspective)
 
