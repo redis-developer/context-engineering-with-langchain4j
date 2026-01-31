@@ -59,7 +59,22 @@ Open `backend-layer/src/main/java/io/redis/devrel/workshop/memory/LongTermMemory
 ```java
 @Configuration
 public class LongTermMemory {
-    // RAG configuration for knowledge base retrieval
+
+    @Autowired
+    private MemoryService memoryService;
+
+    @Bean
+    public RetrievalAugmentor getRetrievalAugmentor() {
+        // TODO: Implement a content injector and a query router to build the
+        // RetrievalAugmentor correctly.
+        return DefaultRetrievalAugmentor.builder()
+                .build();
+    }
+
+    private ContentRetriever getGeneralKnowledgeBase() {
+        // TODO: Implement a ContentRetriever to retrieve the knowledge base
+        return null;
+    }
 }
 ```
 
