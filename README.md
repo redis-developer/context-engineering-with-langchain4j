@@ -294,7 +294,7 @@ Your application now has dual-layer memory, but still lacks:
 Solution:
 - Check Redis Agent Memory Server is running
 - Verify the POST request format is correct
-- Check backend logs for storage errors
+- Check if the `id` field is not being duplicated
 - Ensure memory text is not empty
 </details>
 
